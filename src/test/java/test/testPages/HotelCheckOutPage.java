@@ -22,6 +22,7 @@ public class HotelCheckOutPage {
     }
 
     public void validateHotelPage() {
+        $(By.xpath(Constants.XPATH_DIV_MODAL_LOADER)).waitUntil(disappear, Constants.cTIMEOUT);
         $(By.xpath(Constants.XPATH_SPINER_LOADER)).waitUntil(disappear, Constants.cTIMEOUT);
         //lista hoteles
         $(By.xpath(Constants.XPATH_LISTA_HOTELES)).waitUntil(appears, Constants.cTIMEOUT);

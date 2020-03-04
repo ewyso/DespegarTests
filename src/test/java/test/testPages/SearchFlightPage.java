@@ -34,6 +34,7 @@ public class SearchFlightPage extends TestUtils {
     public void selectDestino(String destino){
         $(By.xpath(Constants.XPATH_DESTINO)).setValue("").sendKeys(destino);
         $(By.xpath(Constants.XPATH_DIV_CIUDADES)).waitUntil(appear, Constants.cTIMEOUT);
+        $(By.xpath(Constants.XPATH_LISTA_CIUDADES)).waitUntil(appear, Constants.cTIMEOUT);
         selectItemFromLi(Constants.XPATH_LISTA_CIUDADES, destino);
         $(By.xpath(Constants.XPATH_DESTINO)).shouldHave(value(destino));
     }

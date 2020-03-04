@@ -1,5 +1,8 @@
 package test.testPages;
 
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import test.commons.Constants;
 import test.commons.TestUtils;
 import org.openqa.selenium.By;
@@ -9,6 +12,7 @@ import java.time.LocalDate;
 
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 
 public class SearchHotelPage extends TestUtils {
 
@@ -22,7 +26,9 @@ public class SearchHotelPage extends TestUtils {
         $(By.xpath(Constants.XPATH_BTN_HOTELES)).click();
         $(By.xpath(Constants.XPATH_SEARCHBOX_HOTELES)).should(appear).should(visible);
         //input hotel
-        $(By.xpath(Constants.XPATH_INPUT_HOTELES)).waitUntil(appear, Constants.cTIMEOUT).click();
+        WebDriverWait implicitWait = new WebDriverWait(getWebDriver(), 10);
+        WebElement foundElement = implicitWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(Constants.XPATH_INPUT_HOTELES)));
+        $(By.xpath(Constants.XPATH_INPUT_HOTELES)).should(visible).click();
         $(By.xpath(Constants.XPATH_INPUT_HOTELES)).setValue("").sendKeys(location);
         selectItemFromLi(Constants.XPATH_LIST_PAISES_HOTELES, location);
         $(By.xpath(Constants.XPATH_INPUT_HOTELES)).shouldHave(value(location));

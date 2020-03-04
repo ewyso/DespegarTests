@@ -43,21 +43,18 @@ public class Constants {
     //Progress
     public static final String XPATH_FLIGHT_PROGRESS_BAR = "//div[@class='header-container']//div[@class='progress-bar-background']//div[@class='progress-bar-content']";
     public static final String XPATH_DIV_SPINNER = "//div[@class='loader-container']//div[@class='loader-spinner']";
-    public static final String XPATH_DIV_MODAL_LOADER = "div[@class='loader-modal-content']";
+    public static final String XPATH_DIV_MODAL_LOADER = "//span[@id='loader-modal-position']";
     public static final String XPATH_SPINER_LOADER = "//div[@id='pageLoader']//div[@class='loader-container']//div[@class='spinner-dot']";
     public static final String XPATH_FULL_SPINNER_LOADER = "//div[@id='fullLoader']//div[@class='hf-spinner-loader']";
 
     //Search Hotel
     public static final String XPATH_BTN_HOTELES = "//div[@class='header-products-container']//i[@class='shifu-icon-product shifu-3-icon-hotels']";
     public static final String XPATH_SEARCHBOX_HOTELES = "//div[@id='searchbox-sbox-box-hotels']";
-    public static final String XPATH_INPUT_HOTELES = "//div[@class='home-ui-searchbox-container home-box-mb']//div[@id='searchbox-sbox-box-hotels']//div[@class='sbox-places -mr3-l']//div[@class='sbox-input-container']//div[@class='input-container']//input";
-            //"//input[@placeholder='Ingresá una ciudad, alojamiento o atracción']";
-    //"//div[@id='searchbox-sbox-box-hotels']//div[@class='sbox5-3-input sbox5-3-validation -top-right -lg -icon-left']//div[@class='input-container']//input[contains(@placeholder, 'ciudad')]";
-    //"//div[@class='home-ui-searchbox-container home-box-mb']//div[@id='searchbox-sbox-box-hotels']//div[@class='sbox-places -mr3-l']//div[@class='input-container']//input";
+    public static final String XPATH_INPUT_HOTELES = "//div[@id='searchbox-sbox-box-hotels']//input[@placeholder='Ingresá una ciudad, alojamiento o atracción']";
     public static final String XPATH_INPUT_PAIS_HOTELES = "//div[@class='sbox-places -mr3-l']//div[@class='input-container']//input";
     public static final String XPATH_LIST_PAISES_HOTELES = "//div[@class='ac-wrapper -desktop -facet -show']//div[@class='ac-container']//ul";
-    public static final String XPATH_FECHA_VIAJE_HOTELES = "//div[@id='searchbox-sbox-box-hotels']//div[@class='sbox-ui-container sbox-hotels-container']//div[@class='input-container sbox-checkin-date-container']";
-    public static final String XPATH_DATEPICKER_HOTELES = "//div[@class='sbox-ui-datepicker-container']//div[@class='_dpmg2--wrapper _dpmg2--roundtrip _dpmg2--show-info _dpmg2--show']";
+    public static final String XPATH_FECHA_VIAJE_HOTELES = "//div[@id='searchbox-sbox-box-hotels']//input[@placeholder='Entrada']";
+    public static final String XPATH_DATEPICKER_HOTELES = "//div[@class='sbox-ui-datepicker-container']//div[contains(@class,'_dpmg2--wrapper')]";
     public static final String XPATH_CALENDAR_HOTELES = "//div[contains(@class,'_dpmg2--wrapper _dpmg2--roundtrip _dpmg2--show-info _dpmg2--show')]//div[contains(@class, '_dpmg2--month _dpmg2--o-')]//div[@class='_dpmg2--month-title']";
     public static final String XPATH_BTN_NEXT_HOTELES = "//div[@class='sbox-ui-datepicker-container']//div[@class='_dpmg2--controls-next']";
     public static final String XPATH_INPUT_HABITACION = "//div[@class='sbox-ui-container sbox-hotels-container']//div[@class='sbox-row sbox-distribution-picker-wrapper sbox-distribution-picker-wrapper']//div[@class='input-container']";

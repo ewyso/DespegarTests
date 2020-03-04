@@ -1,5 +1,6 @@
 package test.testPages;
 
+import com.sun.xml.internal.bind.v2.runtime.reflect.opt.Const;
 import test.commons.Constants;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -17,7 +18,7 @@ public class BuyFlightPage {
         //Scrolls to bottom to load all the page
         $(By.xpath(Constants.XPATH_DIV_FOOTER)).scrollIntoView(true);
         //Waits until spinner dissapear
-        $(By.xpath(Constants.XPATH_DIV_SPINNER)).should(disappear);
+        $(By.xpath(Constants.XPATH_DIV_SPINNER)).waitUntil(disappear, Constants.cHIGH_TIMEOUT);
         List<WebElement> allFlightPrices = $(By.xpath(".//*")).findElements(By.xpath(Constants.XPATH_SPAN_PRECIO_FINAL));
         $(By.xpath(Constants.XPATH_DIV_OPCION_VUELO)).scrollIntoView(true);
 
@@ -37,6 +38,7 @@ public class BuyFlightPage {
 
     public void selectPaymentMethod() {
         //select card
+        $(By.xpath(Constants.XPATH_DIV_TARJETA_CREDITO)).waitUntil(appear, Constants.cTIMEOUT);
         $(By.xpath(Constants.XPATH_DIV_TARJETA_CREDITO)).should(appear);
         $(By.xpath(Constants.XPATH_DIV_TARJETA_CREDITO)).click();
         $(By.xpath(Constants.XPATH_DIV_BANCOS_TARJETA)).should(appear);
