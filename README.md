@@ -37,7 +37,7 @@ donde se visualiza una lista de hoteles disponibles.
     
 La funcionalidad especifica de cada test case se encuentra sobre dentro del paquete test.testPages con el nombre de la pagina base segun corresponda
 
-Todas las validaciones que están pedidas en los test cases están hechas con la libreria selenide, por lo cual los asserts de validacion son los siguientes:
+Todas las validaciones pedidas en los test cases están hechas con la libreria selenide, por lo cual los asserts de validacion son los siguientes:
 - shouldHave(value/attribute(valorEsperado))
 - waitUntil(visible/appear/dissapear)
 - should(visible/appear/dissapear)
